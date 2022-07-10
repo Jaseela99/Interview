@@ -87,3 +87,18 @@ let l=1
     console.log(l)//not defined
 }
 x()
+/////////////////////////////////////
+console.log("1"==1)//true only compares value
+console.log("1"===1)//false compares type
+///////////////////////////////
+//var ,let const
+
+//var-redeclared ,reassigned,function scope and is hoisted,declared and then assigned
+//let-reassigned have block scope ,declared and then assigned,not redeclared.
+//const - block scope,should be assigned with declaration,not redeclared and reassigned
+/////////////////////
+
+
+//undefined and null
+//undefined - no value ,type is undefined
+//null - value, type is object
