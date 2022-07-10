@@ -39,14 +39,14 @@ console.log(a("hi"))
 ////////////////////////////
 
 
-let x = function (){
+let xy= function (){
     return 
     {
         message ="hi"
     }
 
 }
-console.log(x()) //return nothing 
+console.log(xy()) //return nothing 
 //if return and braces are in same line it returns the message
 
 /////////////////////////////////
@@ -75,4 +75,15 @@ console.log(profiles)
 
 console.log(Math.max())//-Infinity that is least value inside the math library
 
-
+////////////////////////////
+let x= function(){
+    if(true){
+    console.log(v)//undefined due to hoisting
+    console.log(l)//not defined
+var v =2
+let l=1
+    }
+    console.log(v)//2
+    console.log(l)//not defined
+}
+x()
