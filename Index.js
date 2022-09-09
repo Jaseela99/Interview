@@ -10,7 +10,7 @@ console.log([...set])
 
 ///////////////////////////////////
 
-let func = function(){
+/* let func = function(){
     {
         let l= "let";
         let v="var"
@@ -21,21 +21,21 @@ let func = function(){
 }
 
 func()
-
+ */
 //to make var unavailable we van define those variables inside a function scope
 /////////////////////////
 
 console.log(5<6<7)// true<7 ===>true
 console.log(7>6>5)//true>5 ===>false
 //////////////////////
-let a =()=> arguments
+/* let a =()=> arguments
 console.log("hi")  //null
 
 function a (){
     return arguments  //"hi"
 }
 
-console.log(a("hi"))
+console.log(a("hi")) */
 ////////////////////////////
 
 
@@ -75,8 +75,9 @@ console.log(profiles)
 
 console.log(Math.max())//-Infinity that is least value inside the math library
 
-////////////////////////////
-let x= function(){
+///
+/////////////////////////
+/* let x= function(){
     if(true){
     console.log(v)//undefined due to hoisting
     console.log(l)//not defined
@@ -86,7 +87,7 @@ let l=1
     console.log(v)//2
     console.log(l)//not defined
 }
-x()
+x() */
 /////////////////////////////////////
 console.log("1"==1)//true only compares value
 console.log("1"===1)//false compares type
@@ -101,4 +102,28 @@ console.log("1"===1)//false compares type
 
 //undefined and null
 //undefined - no value ,type is undefined
-//null - value, type is object
+//null - value, type is 
+
+////////////////////////////
+
+function x(){   //1 is printed since console is one inside a settimeout
+    console.log(i)
+    setTimeout(function(){
+    },1000)
+    var i=1
+}
+x()
+
+/////////////////////////////
+
+let str ="011010111"
+
+const countOne=(str)=>{
+let arr= str.split("")
+return arr.reduce((sum,ar)=>{
+  return  ar==="1"? sum +=1:sum
+},0)
+}
+
+console.log(countOne(str))
+console.log((str.split("1").length - 1))
